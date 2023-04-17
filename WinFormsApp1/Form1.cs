@@ -11,16 +11,17 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            richTextBox2.Text = "";
             bool is_err = false;
             if (textBox1.Text != "" && richTextBox1.Text != "")
             {
 
                 try {
                     string[] s = richTextBox1.Text.Split('\n');
-                    Convert.ToInt32(textBox1.Text);
+                    Convert.ToSingle(textBox1.Text);
                     foreach(string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -32,22 +33,22 @@ namespace WinFormsApp1
 
                     // получаем массив через ввод из richTextBox1
                     string[] mass = richTextBox1.Text.Split('\n');
-                    int z = Convert.ToInt32(textBox1.Text);
+                    float z = Convert.ToSingle(textBox1.Text);
                     int replaceCount = 0;
                     for (int i = 0; i < mass.Length; i++)
                     {
-                        if (Convert.ToInt32(mass[i]) > z)
+                        if (Convert.ToSingle(mass[i]) > z)
                         {
-                            mass[i] = Convert.ToString(z);
                             replaceCount++;
+                            mass[i] = Convert.ToString(z);
 
                         }
                     }
+                    label6.Text = Convert.ToString(replaceCount);
                     foreach (string el in mass)
                     {
                         richTextBox2.Text += el + '\n';
                     }
-                    label6.Text = Convert.ToString(replaceCount);
                 
                     textBox1.Text = "";
                     richTextBox1.Text = "";

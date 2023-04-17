@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsApp10\WinFormsApp10.csproj" />
+  </ItemGroup>
+
 </Project>

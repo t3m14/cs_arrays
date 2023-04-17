@@ -9,6 +9,7 @@ namespace WinFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
+            richTextBox2.Text = "";
             bool is_err = false;
             if (richTextBox1.Text != "")
             {
@@ -19,7 +20,7 @@ namespace WinFormsApp6
 
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -33,7 +34,7 @@ namespace WinFormsApp6
                     string[] mass = richTextBox1.Text.Split('\n');
                     for (int i = 0; i < mass.Length; i++)
                     {
-                        if (Convert.ToInt32(mass[i]) >= 0)
+                        if (Convert.ToSingle(mass[i]) >= 0)
                         {
                             richTextBox2.Text += mass[i] + '\n';
 
@@ -42,14 +43,17 @@ namespace WinFormsApp6
                     }
                     for (int i = 0; i < mass.Length; i++)
                     {
-                        if (Convert.ToInt32(mass[i]) <= 0)
+                        if (Convert.ToSingle(mass[i]) <= 0)
                         {
                             richTextBox2.Text += mass[i] + '\n';
 
 
                         }
                     }
-
+                    if (mass.Length == 0)
+                    {
+                        richTextBox2.Text = "Нет элементов!";
+                    }
 
                     richTextBox1.Text = "";
                 }

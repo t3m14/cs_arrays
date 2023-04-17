@@ -26,13 +26,13 @@ namespace WinFormsApp10
                 try
                 {
                     string[] s = richTextBox1.Text.Split('\n');
-                    Convert.ToInt32(textBox1);
-                    Convert.ToInt32(textBox2);
-                    Convert.ToInt32(textBox3);
-                    Convert.ToInt32(textBox4);
+                    Convert.ToSingle(textBox1);
+                    Convert.ToSingle(textBox2);
+                    Convert.ToSingle(textBox3);
+                    Convert.ToSingle(textBox4);
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -45,16 +45,16 @@ namespace WinFormsApp10
                     // получаем массив через ввод из richTextBox1
                     string[] arr = richTextBox1.Text.Split('\n');
 
-                    int Nb = Convert.ToInt32(textBox1); // задаем размер партии
-                    int N = Convert.ToInt32(textBox2); // задаем размер детали
-                    int A = Convert.ToInt32(textBox3); // задаем значение интервала
-                    int b = Convert.ToInt32(textBox4); // задаем допустимую погрешность
+                    float Nb = Convert.ToSingle(textBox1); // задаем размер партии
+                    float N = Convert.ToSingle(textBox2); // задаем размер детали
+                    float A = Convert.ToSingle(textBox3); // задаем значение интервала
+                    float b = Convert.ToSingle(textBox4); // задаем допустимую погрешность
 
                     int count = 0; // счетчик бракованных деталей
 
                     foreach (string size in arr)
                     {
-                        if (Convert.ToInt32(size) < A - b || Convert.ToInt32(size) > A + b)
+                        if (Convert.ToSingle(size) < A - b || Convert.ToSingle(size) > A + b)
                             count++; // увеличиваем счетчик при несоответствии
                     }
 

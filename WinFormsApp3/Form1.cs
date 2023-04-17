@@ -20,7 +20,7 @@ namespace WinFormsApp3
                     string[] s = richTextBox1.Text.Split('\n');
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -38,14 +38,14 @@ namespace WinFormsApp3
 
                     for (int i = 0; i < heights.Length; i++)
                     {
-                        if (Convert.ToInt32(heights[i]) < 0)
+                        if (Convert.ToSingle(heights[i]) < 0)
                         { // мальчик
-                            boysSum += Math.Abs(Convert.ToInt32(heights[i]));
+                            boysSum += Math.Abs(Convert.ToSingle(heights[i]));
                             boysCount++;
                         }
                         else
                         { // девочка
-                            girlsSum += Convert.ToInt32(heights[i]);
+                            girlsSum += Convert.ToSingle(heights[i]);
                             girlsCount++;
                         }
                     }

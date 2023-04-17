@@ -18,10 +18,10 @@ namespace WinFormsApp7
                 try
                 {
                     string[] s = richTextBox1.Text.Split('\n');
-                    Convert.ToInt32(textBox1.Text);
+                    Convert.ToSingle(textBox1.Text);
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -33,12 +33,12 @@ namespace WinFormsApp7
 
                     // получаем массив через ввод из richTextBox1
                     string[] mass = richTextBox1.Text.Split('\n');
-                    int m = Convert.ToInt32(textBox1.Text);
+                    float m = Convert.ToSingle(textBox1.Text);
                     int product = 1;
                     bool exists = false;
                     foreach (string number in mass)
                     {
-                        if (Convert.ToInt32(number) > m)
+                        if (Convert.ToSingle(number) > m)
                         {
                             product *= Convert.ToInt32(number);
                             exists = true;
@@ -47,6 +47,10 @@ namespace WinFormsApp7
                     if (exists)
                     {
                         label4.Text = Convert.ToString(product);
+                    }
+                    else
+                    {
+                        label4.Text = "Нет таких элементов!";
                     }
 
                 }

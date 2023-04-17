@@ -20,7 +20,7 @@ namespace WinFormsApp2
                     string[] s = richTextBox1.Text.Split('\n');
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -37,15 +37,15 @@ namespace WinFormsApp2
                     int nul = 0;
                     for (int i = 0; i < mass.Length; i++)
                     {
-                        if (Convert.ToInt32(mass[i]) > 0)
+                        if (Convert.ToSingle(mass[i]) > 0)
                         {
                             pos++;
                         }
-                        if (Convert.ToInt32(mass[i]) < 0)
+                        if (Convert.ToSingle(mass[i]) < 0)
                         {
                             neg++;
                         }
-                        if (Convert.ToInt32(mass[i])  == 0)
+                        if (Convert.ToSingle(mass[i])  == 0)
                         {
                             nul++;
                         }

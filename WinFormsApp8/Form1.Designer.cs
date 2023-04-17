@@ -127,12 +127,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(280, 21);
+            this.label1.Location = new System.Drawing.Point(328, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 45);
+            this.label1.Size = new System.Drawing.Size(248, 45);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Дан   массив   действительных   чисел. \r\nЗаменить   все   его   элементы,   больш" +
-    "ие\r\nданного Z, этим числом. Подсчитать количество замен.";
+            this.label1.Text = "Даны натуральные числа a1, a2, …an.\r\nУказать те, у которых остаток от деления на\r" +
+    "\nМ равен L (0<= L <= М-1).";
             // 
             // textBox2
             // 

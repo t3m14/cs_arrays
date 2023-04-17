@@ -9,6 +9,8 @@ namespace WinFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
+            richTextBox2.Text = "";
+
             bool is_err = false;
             if (richTextBox1.Text != "")
             {

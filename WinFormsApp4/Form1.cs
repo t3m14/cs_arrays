@@ -18,7 +18,7 @@ namespace WinFormsApp4
                     string[] s = richTextBox1.Text.Split('\n');
                     foreach (string el in s)
                     {
-                        Convert.ToInt32(el);
+                        Convert.ToSingle(el);
                     }
                 }
                 catch
@@ -35,7 +35,7 @@ namespace WinFormsApp4
 
                     for (int i = 1; i < arr.Length - 1; i++)
                     {
-                        if (Convert.ToInt32(arr[i]) > Convert.ToInt32(arr[i - 1]) && Convert.ToInt32(arr[i]) > Convert.ToInt32(arr[i + 1]))
+                        if (Convert.ToSingle(arr[i]) > Convert.ToSingle(arr[i - 1]) && Convert.ToSingle(arr[i]) > Convert.ToSingle(arr[i + 1]))
                         {
                             count++;
                         }
