@@ -27,12 +27,33 @@ namespace WinFormsApp3
                 {
                     MessageBox.Show("ќшибка ввода, проверьте правильность введЄнных данных!");
                 }
+                try
+                {
+                    Convert.ToInt32(textBox1.Text);
+                }
+                catch
+                {
+                    is_err = true;
+                    MessageBox.Show("¬ведено не число");
+                    return;
+                }
+                if(Convert.ToInt32(textBox1.Text) < 0)
+                {
+                    is_err=true;
+                    MessageBox.Show("¬ведено отрицательное число");
+                    return ;
+                }
+
                 if (!is_err)
                 {
 
                     // получаем массив через ввод из richTextBox1
                     string[] heights = richTextBox1.Text.Split('\n');
-   
+                    if (heights.Length != Convert.ToInt32(textBox1.Text))
+                    {
+                        MessageBox.Show("N не равно длинне массива");
+                        return;
+                    }
                     double boysSum = 0, girlsSum = 0;
                     int boysCount = 0, girlsCount = 0;
 
